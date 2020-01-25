@@ -1,10 +1,27 @@
 <h1>Hola Mundo Angular!</h1>
-<div>
-  <app-saludo></app-saludo>
+<!--<div>
+  <app-saludo mensaje="Hola"></app-saludo>
 </div>
 
-<app-saludo></app-saludo>
-<app-saludo></app-saludo>
-<app-saludo></app-saludo>
-<app-saludo></app-saludo>
-<app-saludo></app-saludo>
+<app-saludo mensaje="Adios"></app-saludo>-->
+
+<input type="text" [(ngModel)]="campoTexto" />
+<p>{{ campoTexto }}</p>
+
+<div>
+  <label>Nombre</label>
+  <input type="text" [(ngModel)]="persona.nombre">
+</div>
+<div>
+  <label>Apellidos</label>
+  <input type="text" [(ngModel)]="persona.apellidos">
+</div>
+<div>
+  <label>Edad</label>
+  <input type="number" [(ngModel)]="persona.edad">
+</div>
+
+<p>{{ persona | json }}</p>
+<!--<app-cuenta-atras [contador]="arrNums[0]" (terminaContador)="manejarTerminaContador($event)"></app-cuenta-atras>
+<app-cuenta-atras [contador]="arrNums[1]"></app-cuenta-atras>
+<app-cuenta-atras contador="32"></app-cuenta-atras>-->

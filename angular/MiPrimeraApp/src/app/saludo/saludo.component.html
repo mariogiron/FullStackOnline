@@ -1,1 +1,15 @@
-<p>saludo works!</p>
+<h2>{{ mensaje }}</h2>
+<p>{{ 2 + 2 }}</p>
+<p>{{ mostrarCadena() }}</p>
+<p [id]="identif">Párrafo normal</p>
+
+<button (click)="pulsarBoton()">PULSA!!!</button>
+
+<select (change)="cambioValor($event)">
+    <option value="1">Uno</option>
+    <option value="2">Dos</option>
+    <option value="3">Tres</option>
+    <option value="4">Cuatro</option>
+</select>
+
+<p id="parrafo">Párrafo</p>
