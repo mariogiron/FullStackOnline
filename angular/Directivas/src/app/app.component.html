@@ -1,5 +1,34 @@
-<button (click)="handleClick()">VERDE</button>
+<div [ngSwitch]="puerta">
+  <p *ngSwitchCase="'uno'">PUERTA 1</p>
+  <p *ngSwitchCase="'dos'">PUERTA 2</p>
+  <p *ngSwitchCase="'tres'">PUERTA 3</p>
+  <p *ngSwitchDefault>OTRO VALOR</p>
+</div>
 
-<p [ngStyle]="estilosParrafo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias delectus, rem
-  aut laboriosam perferendis omnis blanditiis autem nostrum inventore, veniam cumque ea, sint alias. Beatae in optio
-  expedita libero alias.</p>
+<p appSubrayado>Texto 1</p>
+<p appSubrayado>Texto 2</p>
+
+<!-- <app-juego-tronos></app-juego-tronos>
+
+<app-semaforo></app-semaforo>
+
+<button (click)="handleClick()">VERDE</button>
+<button (click)="toggleClase()">MOSTRAR / QUITAR CLASE</button>
+
+<input type="text" [(ngModel)]="estilosParrafo.color" style="display: none;">
+
+<p [ngStyle]="estilosParrafo" *ngIf="mostrarParrafo">Primero</p>
+<p *ngIf="!mostrarParrafo">Segundo</p>
+
+
+<p style="color: indigo;">{{ estilosParrafo.color }}</p>
+
+<p [ngClass]="clasesParrafo">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ut, porro. Cupiditate
+  quibusdam
+  suscipit quaerat, maxime similique exercitationem. Et, placeat accusantium, ea necessitatibus harum numquam,
+  voluptatibus fuga molestiae doloremque culpa sapiente.</p>
+
+<p [ngClass]="{ 'uno': mostrarClase, 'dos': !mostrarClase }">Lorem ipsum dolor sit amet consectetur adipisicing elit.
+  Laudantium fuga soluta
+  ut tempora! Error reiciendis dolorem quaerat incidunt in quae nostrum aliquid ducimus, asperiores ab ad quas, sapiente
+  omnis consequuntur?</p> -->

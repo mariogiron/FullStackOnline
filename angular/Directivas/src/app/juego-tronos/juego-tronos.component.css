@@ -1,0 +1,13 @@
+.item {
+    width: 200px;
+    background-color: gray;
+    border: 1px solid black;
+}
+
+.clasePar {
+    background-color: tomato;
+}
+
+.claseImpar {
+    background-color: bisque;
+}

@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <app-formulario (enviarEmpleado)="handleEnviarEmpleado($event)"></app-formulario>
+    </div>
+    <div class="col-7">
+      <app-lista [empleados]="arrEmpleados"></app-lista>
+    </div>
+  </div>
+</div>

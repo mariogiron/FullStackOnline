@@ -1,0 +1,3 @@
+<div class="semaforo"
+    [ngClass]="{ 'rojo': (color === 'rojo'), 'verde': (color === 'verde'), 'amarillo': (color === 'amarillo') }"></div>
+<button (click)="cambiaColor()">CAMBIA!!</button>

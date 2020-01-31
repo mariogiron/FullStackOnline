@@ -1,0 +1,10 @@
+<div class="item"
+    *ngFor="let episodio of episodios; let indice = index; let primero = first; let par = even; let impar = odd;"
+    [ngClass]="{ clasePar: par, claseImpar: !par }">
+    <!-- index, first, last, even, odd -->
+    <h3>{{ episodio.title }}</h3>
+    <p>{{ episodio.director }}</p>
+    <p>ÍNDICE: {{ indice }}</p>
+    <p>PRIMERO: {{ primero }}</p>
+    <p>PAR: {{ par }} - IMPAR {{ impar }}</p>
+</div>
