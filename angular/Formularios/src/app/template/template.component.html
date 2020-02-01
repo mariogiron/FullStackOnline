@@ -1,0 +1,20 @@
+<form #formulario="ngForm" (ngSubmit)="onSubmit(formulario.value)">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" name="nombre" ngModel>
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" class="form-control" name="apellidos" ngModel>
+    </div>
+    <div class="form-group">
+        <label>Dirección</label>
+        <input type="text" class="form-control" name="direccion" ngModel>
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" name="password" ngModel>
+    </div>
+    <input type="submit" value="Enviar">
+</form>
+{{ formulario.value | json }}

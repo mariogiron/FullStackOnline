@@ -1,0 +1,14 @@
+.enlaces a {
+    padding: 10px;
+    background-color: beige;
+    margin-right: 5px;
+    text-decoration: none;
+}
+
+.enlaces a:hover {
+    background-color: burlywood;
+}
+
+.enlaces a.activo {
+    background-color: coral;
+}

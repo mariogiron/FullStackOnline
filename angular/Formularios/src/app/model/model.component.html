@@ -1,0 +1,27 @@
+<form [formGroup]="formulario" (ngSubmit)="onSubmit()">
+    <div class="form-group">
+        <label>Nombre</label>
+        <input type="text" class="form-control" formControlName="nombre">
+    </div>
+    <div class="form-group">
+        <label>Apellidos</label>
+        <input type="text" class="form-control" formControlName="apellidos">
+    </div>
+    <div class="form-group">
+        <label>Email</label>
+        <input type="text" class="form-control" formControlName="email">
+    </div>
+    <div class="form-group">
+        <label>Edad</label>
+        <input type="text" class="form-control" formControlName="edad">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password">
+    </div>
+    <div class="form-group">
+        <label>Repite Password</label>
+        <input type="password" class="form-control" formControlName="repite_password">
+    </div>
+    <input type="submit" value="Enviar">
+</form>

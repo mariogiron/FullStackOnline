@@ -1,0 +1,13 @@
+<div class="enlaces">
+  <a [routerLink]="['hola']" [routerLinkActive]="'activo'">Hola</a>
+  <a [routerLink]="['contacto']" [routerLinkActive]="'activo'">Contacto</a>
+  <a [routerLink]="['info']" [routerLinkActive]="'activo'">Info</a>
+  <a [routerLink]="['producto', 34, 'related']">Producto 34 Relacionados</a>
+  <a [routerLink]="['producto', 34, 'reviews']">Producto 34 Reseñas</a>
+</div>
+<router-outlet></router-outlet>
+<div class="botones">
+  <button (click)="handleClick('hola')">Hola</button>
+  <button (click)="handleClick('contacto')">Contacto</button>
+  <button (click)="handleClick('info')">Info</button>
+</div>
