@@ -1,0 +1,10 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <app-formulario (enviarPersona)="handleEnviarPersona($event)"></app-formulario>
+    </div>
+    <div class="col-6">
+      <app-resultado [resultado]="objPersona"></app-resultado>
+    </div>
+  </div>
+</div>

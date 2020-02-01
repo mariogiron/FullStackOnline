@@ -1,0 +1,9 @@
+<div class="card">
+    <div class="card-header" [ngClass]="{ 'activo': empleado?.activo, 'inactivo': !empleado?.activo }">
+        {{ empleado?.nombre }} {{ empleado?.apellidos }}
+    </div>
+    <div class="card-body">
+        <h5 class="card-title">{{ empleado?.departamento }}</h5>
+        <p class="card-text">{{ empleado?.activo ? 'ACTIVO' : 'INACTIVO' }}</p>
+    </div>
+</div>

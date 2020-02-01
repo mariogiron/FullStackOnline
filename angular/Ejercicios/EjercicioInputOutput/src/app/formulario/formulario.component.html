@@ -1,0 +1,17 @@
+<div class="form-group">
+    <label>Nombre</label>
+    <input type="text" class="form-control" [(ngModel)]="persona.nombre">
+</div>
+<div class="form-group">
+    <label>Apellidos</label>
+    <input type="text" class="form-control" [(ngModel)]="persona.apellidos">
+</div>
+<div class="form-group">
+    <label>Direccion</label>
+    <input type="text" class="form-control" [(ngModel)]="persona.direccion">
+</div>
+<div class="form-group">
+    <label>Edad</label>
+    <input type="number" class="form-control" [(ngModel)]="persona.edad">
+</div>
+<button (click)="handleClick()">Enviar</button>

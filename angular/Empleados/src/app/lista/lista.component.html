@@ -1,4 +1,4 @@
-<table class="table">
+<!--<table class="table">
     <thead>
         <tr>
             <th>#Orden</th>
@@ -17,4 +17,9 @@
             <td>{{ empleado.activo }}</td>
         </tr>
     </tbody>
-</table>
+</table>-->
+<div class="row">
+    <div class="col-6" *ngFor="let emp of empleados">
+        <app-detalle-empleado [empleado]="emp"></app-detalle-empleado>
+    </div>
+</div>
