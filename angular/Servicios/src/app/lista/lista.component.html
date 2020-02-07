@@ -1,0 +1,13 @@
+<select (change)="manejarChange($event)">
+    <option value="españa">España 🇪🇸</option>
+    <option value="reino unido">Reino Unido 🇬🇧</option>
+    <option value="chile">Chile 🇨🇱</option>
+    <option value="canadá">Canadá 🇨🇦</option>
+</select>
+<div class="row">
+    <div class="col-4" *ngFor="let escritor of arrEscritores">
+        <h3>{{escritor.nombre}} {{escritor.apellidos}}</h3>
+        <img [src]="escritor.imagen" />
+        <p>Pais: {{escritor.pais}}</p>
+    </div>
+</div>
