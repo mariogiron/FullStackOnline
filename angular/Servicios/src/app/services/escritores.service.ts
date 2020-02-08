@@ -1,5 +1,5 @@
-import { Escritor } from './models/escritor.model';
-import { ESCRITORES } from './db/escritores.db';
+import { Escritor } from '../models/escritor.model';
+import { ESCRITORES } from '../db/escritores.db';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -28,7 +28,7 @@ export class EscritoresService {
 
   getById(escritorId): Promise<Escritor> {
     return new Promise((resolve, reject) => {
-      const escritorEncontrado = ESCRITORES.find(escritor => escritor.id === parseInt(escritorId));
+      const escritorEncontrado = ESCRITORES.find(escritor => escritor.id === parseInt(escritorId, 10));
       resolve(escritorEncontrado);
     });
   }

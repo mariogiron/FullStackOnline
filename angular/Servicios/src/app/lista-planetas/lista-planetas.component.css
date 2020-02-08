@@ -1,0 +1,12 @@
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.planeta {
+    border: 1px solid black;
+    width: 31%;
+    margin: 10px;
+    padding: 10px;
+}

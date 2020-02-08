@@ -1,4 +1,4 @@
-/* import { Libro } from '../models/libro.model';
+import { Libro } from '../models/libro.model';
 
 export const LIBROS: Libro[] = [
     {
@@ -128,4 +128,3 @@ export const LIBROS: Libro[] = [
         escritor: 8
     }
 ]
- */

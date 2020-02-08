@@ -1,3 +1,4 @@
+import { RandomService } from './services/random.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Servicios';
+
+  constructor(private randomService: RandomService) { }
+
+  ngOnInit() {
+    this.randomService.getRandomNum()
+      .then(response => {
+        console.log(response);
+      });
+  }
+
 }

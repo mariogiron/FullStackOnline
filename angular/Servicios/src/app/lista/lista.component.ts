@@ -1,5 +1,5 @@
 import { Escritor } from './../models/escritor.model';
-import { EscritoresService } from './../escritores.service';
+import { EscritoresService } from '../services/escritores.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

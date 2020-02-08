@@ -1,1 +1,12 @@
-<p>detalle works!</p>
+<!--<div *ngIf="escritor">
+    <h4>{{ escritor.nombre }} {{ escritor.apellidos }}</h4>
+    <p>Pais: {{ escritor.pais }}</p>
+    <img [src]="escritor.imagen" width="300" />
+</div>-->
+
+<h4>{{ escritor?.nombre }} {{ escritor?.apellidos }}</h4>
+<p>Pais: {{ escritor?.pais }}</p>
+<img [src]="escritor?.imagen" width="300" />
+<div>
+    <router-outlet></router-outlet>
+</div>

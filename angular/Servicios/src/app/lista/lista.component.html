@@ -5,7 +5,7 @@
     <option value="canadá">Canadá 🇨🇦</option>
 </select>
 <div class="row">
-    <div class="col-4" *ngFor="let escritor of arrEscritores">
+    <div class="col-4" *ngFor="let escritor of arrEscritores" [routerLink]="['/escritores', escritor.id]">
         <h3>{{escritor.nombre}} {{escritor.apellidos}}</h3>
         <img [src]="escritor.imagen" />
         <p>Pais: {{escritor.pais}}</p>
