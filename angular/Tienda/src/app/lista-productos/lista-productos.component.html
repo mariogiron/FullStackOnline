@@ -1,0 +1,17 @@
+<select (change)="manejarChange($event)">
+    <option value="macbook">Macbook</option>
+    <option value="imac">iMac</option>
+    <option value="ipad">iPad</option>
+    <option value="iphone">iPhone</option>
+    <option value="watch">iWatch</option>
+    <option value="accesorios">Accesorios</option>
+</select>
+<div class="wrapper">
+    <div class="producto" *ngFor="let producto of listaProductos">
+        <h5>{{ producto.name }}</h5>
+        <img [src]="producto.image" alt="">
+        <p>{{ producto.price }}€</p>
+        <p>{{ producto.categoria }}</p>
+        <button (click)="manejarClick(producto)">Comprar</button>
+    </div>
+</div>

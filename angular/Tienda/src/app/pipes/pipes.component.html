@@ -1,0 +1,9 @@
+<p>{{ precio | currency:'EUR' }}</p>
+<p>{{ fechaActual | date:'d/MM/y HH:mm.ss' }}</p>
+<p>{{ numero | number:'1.2-4' }}</p>
+<p>{{ 'hola' | uppercase }}</p>
+<p>{{ numeroAleatorio | percent:'1.1-2' }}</p>
+<p>{{ 'en un lugar de la mancha' | capitalize }}</p>
+<div class="semaforo" [@cambiaColor]="color"></div>
+
+<h1 class="animated bounce" [ngClass]="{ infinite: (color === 'rojo' || color === 'amarillo') }">Example</h1>

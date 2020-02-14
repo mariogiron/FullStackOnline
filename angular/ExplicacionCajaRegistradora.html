@@ -1,0 +1,18 @@
+<!-- APP COMP HTML -->
+
+<app-lista-productos titulo="Comida" [productos]="arrComida" (seleccionaProducto)="manejaSeleccionaProducto($event)"></app-lista-productos>
+<app-lista-productos titulo="Bebida" [productos]="arrBebida" (seleccionaProducto)="manejaSeleccionaProducto($event)"></app-lista-productos>
+<app-pedido [productos]="arrProductosSeleccionados"></app-pedido>
+
+<!-- APP COMP TS -->
+
+arrComida: Producto[];
+arrBebida: Producto[];
+arrProductosSeleccionados: Producto[];
+manejaSeleccionaProducto($event)
+
+<!-- LISTA PRODUCTOS TS -->
+
+@Input() titulo: string;
+@Input() productos: Producto[];
+@Output() seleccionaProducto: EventEmitter<Producto>
