@@ -1,7 +1,9 @@
 const router = require('express').Router();
-const { check, validationResults } = require('express-validator');
+const { check, validationResult } = require('express-validator');
 const moment = require('moment');
 const jwt = require('jsonwebtoken');
+const bcrypt = require('bcryptjs');
+const middlewares = require('../middlewares');
 
 const User = require('../../models/user');
 
@@ -11,20 +13,49 @@ router.get('/', async (req, res) => {
 });
 
 // /api/users/login
-router.post('/login', (req, res) => {
+router.post('/login', async (req, res) => {
     // Comprobar con la base de datos si el login es correcto
-    console.log(req.body.username, req.body.password);
+    const user = await User.getByEmail(req.body.email);
+    if (!user) {
+        return res.json({ error: 'Nombre de usuario y/o contraseña incorrectos' });
+    }
 
-    const user = { id: 1, username: 'Mario', email: 'mario@gmail.com' }
-    res.json({ message: 'Login correcto', token: createToken(user) })
+    // Compruebo si las password coinciden
+    const iguales = bcrypt.compareSync(req.body.password, user.password);
+    if (iguales) {
+        res.json({ message: 'Login correcto', token: createToken(user) })
+    } else {
+        return res.json({ error: 'Nombre de usuario y/o contraseña incorrectos' });
+    }
 });
 
 // /api/users/register
-router.get('/register', [
+router.post('/register', [
     check('email', 'El email tiene que ser ...').not().isEmpty().isEmail(),
-    check('email', 'El username tiene que ser ...').not().isEmpty(),
-], (req, res) => {
-    res.send('Todo correcto REG');
+    check('username', 'El username tiene que ser ...').not().isEmpty(),
+], async (req, res) => {
+
+    const errors = validationResult(req);
+    if (!errors.isEmpty()) {
+        return res.json({ error: errors.array() });
+    }
+
+    req.body.password = bcrypt.hashSync(req.body.password, 10);
+    try {
+        const result = await User.create(req.body);
+        res.json(result);
+    } catch (err) {
+        res.json({ err: err.message });
+    }
+});
+
+router.get('/admin', middlewares.checkToken, async (req, res) => {
+    console.log(req.usuarioId);
+    User.isAdmin(req.usuarioId).then(admin => {
+        console.log('/ADMIN', admin);
+        res.json({ admin: admin });
+    });
+
 });
 
 const createToken = (user) => {
@@ -33,7 +64,7 @@ const createToken = (user) => {
         createdAt: moment().unix(),
         expiredAt: moment().add(5, 'minutes').unix()
     }
-    return jwt.sign(obj, 'CLAVE-SUPERSECRETA');
+    return jwt.sign(obj, process.env.SECRET_KEY);
 }
 
 module.exports = router;

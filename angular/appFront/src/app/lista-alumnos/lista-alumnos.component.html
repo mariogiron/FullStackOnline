@@ -1,0 +1,14 @@
+<table class="table">
+    <tr>
+        <th>Nombre</th>
+        <th>Apellidos</th>
+        <th>Edad</th>
+        <th>Email</th>
+    </tr>
+    <tr *ngFor="let alumno of arrAlumnos">
+        <td>{{ alumno.nombre }}</td>
+        <td>{{ alumno.apellidos }}</td>
+        <td>{{ alumno.edad }}</td>
+        <td>{{ alumno.email }}</td>
+    </tr>
+</table>

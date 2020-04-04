@@ -1,0 +1,16 @@
+extends ../layout.pug
+
+block contenido
+    form(action="/alumnos/create", method="post")
+        div.form-group
+            label Nombre
+            input.form-control(type="text", name="nombre")
+        div.form-group
+            label Apellidos
+            input.form-control(type="text", name="apellidos")
+        div.form-group
+            label Edad
+            input.form-control(type="text", name="edad")
+        div.form-group
+            label Email
+            input.form-control(type="text", name="email")

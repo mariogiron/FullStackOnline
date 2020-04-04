@@ -1,0 +1,29 @@
+extends ../layout.pug
+
+block contenido
+    h1= title
+    div
+        p#principal.main Contenido del párrafo
+        a.enlace(href="http://www.google.es", target="_blank") Google.es
+    div
+        ul
+            each student in students
+                li= student.nombre
+    div
+        table.table
+            tr
+                th Nombre
+                th Apellidos
+                th Edad
+                th Email
+            each student in students
+                tr
+                    td= student.nombre
+                    td= student.apellidos
+                    td= student.edad
+                    td= student.email
+            else
+                tr
+                    td(colspan=4) No existen alumnos
+
+
