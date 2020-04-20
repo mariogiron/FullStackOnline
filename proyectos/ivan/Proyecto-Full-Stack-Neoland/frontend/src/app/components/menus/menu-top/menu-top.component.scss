@@ -1,0 +1,29 @@
+@import "../../import.scss";
+
+.nav-top {
+  /* z-index: 200; */
+  /* @include positionAbsolute(0, auto); */
+  @include flexCenter(row, space-between, center);
+  @include marcosInternos($spaceSmall, 0px);
+  font-size: $fontSmaller;
+
+  background-color: $colorBg;
+  width: 100%;
+  height: $anchoMenu;
+
+  .registro {
+    @include flexCenter();
+  }
+  .logo,
+  .avatar {
+    @include flexCenter;
+    width: $anchoMenu;
+    height: $anchoMenu;
+    padding: 5;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

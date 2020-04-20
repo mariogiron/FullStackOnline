@@ -1,0 +1,16 @@
+@import "../../import.scss";
+
+.menu-usuario-lat {
+    @include flexCenter(column, center);
+    text-align: center;
+    .avatar {
+        width: 200px;
+        height: 200px;
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+        }
+    }
+}

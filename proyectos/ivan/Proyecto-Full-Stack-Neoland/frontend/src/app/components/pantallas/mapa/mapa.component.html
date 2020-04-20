@@ -1,0 +1,50 @@
+<!-- <div class="interface interface-flex interface-sinpadding"> -->
+
+<!-- 👇 INICIO -- Contenido genereal rooter ------------------------- -->
+<!-- <div class="container-fluid h-100"> -->
+<!--<section class="wrapper h-100"> -->
+<!-- <div class="contenido-mapa">
+    <div class="input-group mb-3">
+        <form (ngSubmit)="showLocation()">
+            <input [(ngModel)]="address" [ngModelOptions]="{standalone: true}" type="text" class="form-control"
+                placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            </div>
+        </form>
+    </div>
+    direccion:{{"direccion"}}, latitud:{{lat}}, longitud:{{lng}}
+</div> -->
+
+<div class="contenido-mapa">
+    <div class="input-group mb-3">
+        <form>
+            <input [(ngModel)]="address" [ngModelOptions]="{standalone: true}" type="text" class="form-control"
+                placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+            </div>
+        </form>
+    </div>
+    direccion:{{"direccion"}}, latitud:{{lat}}, longitud:{{lng}}
+</div>
+<!-- 👇 Mapa  -- INICIO ------------------------------ -->
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" [fullscreenControl]="true">
+
+    <!-- 👇 Marcadores  -- INICIO ------------------------------ -->
+    <agm-marker [latitude]="lat" [longitude]="lng">
+        <!-- Muestra un bocadillo en la marca-->
+        <agm-info-window>
+            Bocadillo
+        </agm-info-window>
+
+
+
+    </agm-marker>
+    <!-- 👆 Marcadores  --  FIN ------------------------------ -->
+
+</agm-map>
+<!-- 👆 Mapa --  FIN ------------------------------ -->
+<!--         </section>-->
+<!-- </div> -->
+<!-- </div> -->

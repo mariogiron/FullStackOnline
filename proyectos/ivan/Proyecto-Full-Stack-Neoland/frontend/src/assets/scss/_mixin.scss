@@ -1,0 +1,44 @@
+@mixin positionAbsolute($top: auto, $bottom: auto) {
+  position: absolute;
+  top: $top;
+  left: 0;
+  bottom: $bottom;
+}
+// Aplicar el estilo de flex centrar en el elemento
+@mixin flexCenter($direction: row, $positionH: center, $alignV: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $positionH;
+  //align-content: center;
+  align-items: $alignV;
+}
+// para el padding interior de capas
+@mixin marcosInternos($topBottom: $spaceMedium, $leftRight: $spaceMedium) {
+  padding-top: $topBottom;
+  padding-bottom: $topBottom;
+  padding-left: $leftRight;
+  padding-right: $leftRight;
+}
+
+//Color gradicente den el background del elemento
+@mixin colorGRadienteLineal() {
+  background-image: linear-gradient(269deg, $colorPrincipalClaro 0%, $colorPrincipal 100%);
+}
+
+//---------------------------------------------------------------------------
+//modificar Estilos
+//---------------------------------------------------------------------------
+@mixin BorrarLista() {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+//---------------------------------------------------------------------------
+// content vacio
+//---------------------------------------------------------------------------
+@mixin contentVacio($position: absolute) {
+  content: "";
+  display: inline-block;
+  position: $position;
+}

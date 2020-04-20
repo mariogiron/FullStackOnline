@@ -1,0 +1,86 @@
+/* html {
+  font-size: $fontSizeInicialAjuste;
+} */
+body {
+  font: {
+    /* family: $fontFamilyBase; */
+    /* size: $fontMedium; */
+    weight: 400; //regular
+    color: $colorFontBase;
+  }
+}
+/* .content {
+  font-size: 1 rem;
+} */
+
+/*Headings -------------------------------------------
+h1{
+    font-size:1 rem;
+}
+h2{
+    font-size:1 rem;
+}
+h3{
+    font-size:1 rem;
+}
+h4{
+    font-size:1 rem;
+}
+h5{
+    font-size:1 rem;
+}
+h6{
+    font-size:1 rem;
+}
+-*/
+/*Display--------------------------------------------
+h1.display{
+    font-size:1 rem;
+}
+h2.display{
+    font-size:1 rem;
+}
+h3.display{
+    font-size:1 rem;
+}
+h4.display{
+    font-size:1 rem;
+}
+h5.display{
+    font-size:1 rem;
+}
+h6.display{
+    font-size:1 rem;
+}
+-*/
+
+strong {
+  font-weight: $fontBold; //medium
+}
+// Etiqueta personalizada
+stronger {
+  font-weight: $fontBolder; //semiblod
+}
+
+//Links
+a {
+  img {
+    border: none;
+  }
+}
+a.a-normal {
+  text-decoration: none;
+  color: $colorFontBase;
+  &:hover {
+    text-decoration: underline;
+    color: $colorPrincipalHover;
+  }
+}
+a.a-color {
+  text-decoration: none;
+  color: $colorPrincipal;
+  &:hover {
+    text-decoration: underline;
+    color: $colorPrincipalHover;
+  }
+}

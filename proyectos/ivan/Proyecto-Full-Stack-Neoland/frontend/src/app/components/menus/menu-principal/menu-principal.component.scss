@@ -1,0 +1,7 @@
+@import "../../import.scss";
+
+.nav-principal {
+  .contenido {
+    @include flexCenter(column, space-between, flex-start);
+  }
+}

@@ -1,0 +1,78 @@
+@import "../../import.scss";
+
+.nav-usuario-perfil {
+    /* z-index: 300;
+    @include positionAbsolute(0, auto); */
+    @include flexCenter(row, center, center);
+    padding: 0;
+    font-size: $fontSmall;
+    margin-top: $spaceMedium;
+    margin-bottom: $spaceBig;
+    border-radius: $EsquinaRedondeadaMedia;
+    background-color: $colorBg;
+    width: 100%;
+    height: $anchoMenu;
+    .menu {
+        display: inline-block;
+        height: 100%;
+
+        ul {
+            @include flexCenter();
+            height: 100%;
+            @include BorrarLista();
+            li {
+                @include flexCenter();
+                height: 100%;
+                position: relative;
+
+                a {
+                    @include flexCenter();
+                    height: 100%;
+                    padding: 0 $spaceSmall;
+                    text-decoration: none;
+                    color: $colorFontBase;
+                    .icono,
+                    .texto {
+                        @include flexCenter();
+                        margin-left: $spaceSmall;
+                        margin-right: $spaceSmall;
+                    }
+                    transform: translateY(0);
+
+                    &::before {
+                        z-index: 50;
+                        @include contentVacio();
+                        @include positionAbsolute(auto, 0);
+                        left: 0;
+                        background-color: $colorBg;
+                        height: 0;
+                        width: 100%;
+                    }
+                    &.active {
+                        pointer-events: none;
+                        color: $colorPrincipalClaro;
+                        &::before {
+                            @include positionAbsolute(auto, 0);
+                            left: 0;
+                            background-color: $colorPrincipalClaro;
+                            height: $spaceSmall;
+                            width: 100%;
+                        }
+                    }
+                    &:hover {
+                        color: $colorPrincipalHover;
+                        transform: translateY(-$spaceSmall);
+
+                        &::before {
+                            @include positionAbsolute(auto, 0);
+                            bottom: -$spaceSmall;
+                            background-color: $colorPrincipalHover;
+                            height: $spaceSmall;
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

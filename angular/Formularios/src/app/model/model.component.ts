@@ -39,6 +39,7 @@ export class ModelComponent implements OnInit {
     const nombreControl = this.formulario.controls.nombre;
     nombreControl.valueChanges.pipe(debounceTime(500)).subscribe((value) => {
       console.log(value);
+      // Lanzar una petición al back para que mire si el email ya está registrado
     });
   }
 

@@ -1,0 +1,30 @@
+<!-- 👇 conversaciones --  INICIO ------------------------------ -->
+<div class="col-12">
+    <div class="usuario-conversacion" style="flex-direction: column;">
+        <h1>conversacion</h1>
+        <!-- <h2>conversacion Recibidas</h2> -->
+        https://getbootstrap.com/docs/4.4/components/media-object/
+        <div class="media-body" *ngFor="let con of conversacion">
+            <h5 class="mt-0">{{con.asunto}}</h5>
+            {{con.ID}} - Emisor: {{con.emisorNombre[0].alias}} - Receptor {{con.receptorNombre[0].alias}} <br>
+            - {{con.fecha_inicio}}
+
+            <div class="media mt-3" *ngFor="let men of con.mensajes">
+                <a class="mr-3" href="#">
+                    <img style="width: 100px; height: 100px;" src="{{ men.emisorNombre[0].foto | urlimg}}" class="mr-3"
+                        alt="...">
+                </a>
+                <div class="media-body">
+                    <div class="fecha">{{men.fecha}}</div>
+                    <h5 class="mt-0">{{men.emisorNombre[0].alias}} dice:</h5>
+
+                    <div class="texto">{{men.texto}}</div>
+                </div>
+            </div>
+            <button _ngcontent-mkk-c50="" type="submit" class="btn btn-primary">Mandar un mensaje a
+                {{con.emisorNombre[0].alias}}</button>
+        </div>
+
+    </div>
+</div>
+<!-- 👆 Conversaciones --  FIN ------------------------------ -->

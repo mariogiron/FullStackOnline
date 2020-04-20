@@ -1,0 +1,61 @@
+<div class="interface">
+
+    <!-- 👇 INICIO -- Contenido genereal rooter ------------------------- -->
+    <div class="container-fluid h-100">
+        <section class="wrapper h-100">
+            <!-- 👇 Pantalla inicial --  INICIO ------------------------------ -->
+            <div class="row h-100">
+                <article class="h-100">
+                    <div class="col-12 h-100">
+                        <!-- ==================================================== -->
+                        <!-- 👇 Contenido frid --  INICIO ------------------------------ -->
+                        <div class="div-flex">
+                            <!-- 👇 Objetos inicial --  INICIO ------------------------------ -->
+                            <div class="card-columns">
+                                <div class="card" *ngFor="let o of arrObjeto">
+                                    <img src="{{o.foto | urlimg }}" class="card-img-top" alt="...">
+
+                                    <div class="card-body">
+                                        <h5 class="card-title">{{o.nombre}}</h5>
+                                        <p class="card-text"><span style="transform: scaleX(-1);"
+                                                class="material-icons">
+                                                format_quote
+                                            </span>{{o.descripcion}}<span class="material-icons">
+                                                format_quote
+                                            </span></p>
+                                    </div>
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item ">
+                                            <div class="usuario"><strong>@{{o.usuario[0].alias}}</strong><img
+                                                    src="{{o.usuario[0].foto |urlimg }}" alt="@{{o.usuario[0].alias}}"
+                                                    title="@{{o.usuario[0].alias}}">
+                                            </div>
+                                        </li>
+                                        <li class="list-group-item fecha"><span class="material-icons">
+                                                insert_invitation
+                                            </span> Perdido el: "fecha"</li>
+                                        <li class="list-group-item fecha"><span class="material-icons">
+                                                insert_invitation
+                                            </span> Encontrado el: "fecha"</li>
+                                    </ul>
+                                    <div class="card-body botones">
+                                        <a href="#" class="card-link"><span class="material-icons">
+                                                insert_comment
+                                            </span></a>
+                                        <a href="#" class="card-link"><span class="material-icons">
+                                                location_on
+                                            </span></a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 👆 Objetos inicial --  FIN ------------------------------ -->
+                        </div>
+                        <!-- 👆 Contenido frid --  FIN ------------------------------ -->
+                        <!-- ==================================================== -->
+                    </div>
+                </article>
+            </div>
+            <!-- 👆 Pantalla inicial --  FIN ------------------------------ -->
+        </section>
+    </div>
+</div>

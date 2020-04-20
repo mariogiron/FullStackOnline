@@ -1,0 +1,55 @@
+<!-- Menú principal de navegación entre las secciónes de la web/api-->
+
+<nav class="navegacion nav-principal animated fadeInLeft">
+  <div class="contenido">
+    <!--     <div class="logo">
+      <span class="material-icons">
+        <i class="material-icons">face</i>
+      </span>
+    </div> -->
+
+    <div class="menu">
+      <ul>
+        <li class="boton">
+          <a [routerLink]="['inicio']" routerLinkActive="active" alt="Ir a la sección de Inicio"
+            title="Ir a la sección de Inicio">
+            <span class="icono"><i class="material-icons  md-24">house</i></span>
+            <span class="texto">Inicio</span>
+          </a>
+        </li>
+        <li class="boton">
+          <a href="#" alt="" title="">
+            <span class="icono"><i class="material-icons md-24">place</i></span>
+            <span class="texto">¿qué pasa<br>donde estas?</span>
+          </a>
+        </li>
+        <li class="boton">
+          <a routerLink="/mapa" routerLinkActive="active" alt="Ir al buscador cartográfico"
+            title="Ir al buscador cartográfico">
+            <span class="icono"><i class="material-icons md-24">explore</i></span>
+            <span class="texto">Explorar</span>
+          </a>
+        </li>
+        <li class="boton">
+          <a routerLink="/objeto" routerLinkActive="active" alt=" Ir a la sección de objetos anunciados"
+            title="Ir a la sección de objetos anunciados">
+            <span class=" icono"><i class="material-icons md-24"><i class="fas fa-diagnoses"></i>
+              </i></span>
+            <span class="texto">Objetos perdidos</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer menu">
+      <ul>
+        <li class="boton">
+          <a href="#" alt="" title="">
+            <span class="icono icono_info"><i class="material-icons md-24">error_outline</i></span>
+            <span class="texto">Información</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

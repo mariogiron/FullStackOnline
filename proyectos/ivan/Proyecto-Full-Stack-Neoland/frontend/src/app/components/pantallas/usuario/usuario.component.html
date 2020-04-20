@@ -1,0 +1,43 @@
+<div class="interface interface-flex">
+
+    <!-- 👇 INICIO -- Contenido genereal rooter ------------------------- -->
+    <div class="container-fluid h-100">
+        <section class="wrapper h-100">
+            <!-- 👇 Perfil usuario --  INICIO ------------------------------ -->
+            <div class="row h-100">
+                <!-- 👇 Menu  usuario --  INICIO ------------------------------ -->
+                <div class="col-12">
+                    <!-- <app-menu-usuario-perfil></app-menu-usuario-perfil> -->
+                    <!-- {{usuario|json}} -->
+                    <!-- {{usuario[id]|json}} -->
+                    <!-- <h1>{{usuario[0].ID}}</h1>
+                    <p>{{usuario[0].alias}}</p>
+                    <p>{{usuario[0].nombre}}</p>
+                    <p>{{usuario[0].apellidos}}</p>
+                    <p>{{usuario[0].edad}}</p>
+                    <p>{{usuario[0].email}}</p>
+                    <p>{{usuario[0].password}}</p>
+                    <p>{{usuario[0].avatar}}</p>
+                    <p>{{usuario[0].fecha_alta}}</p> -->
+
+                </div>
+                <!-- 👆 Menu  usuario --  FIN ------------------------------ -->
+                <!-- ==================================================== -->
+                <!-- 👇 Contenido frid --  INICIO ------------------------------ -->
+                <!-- {{usuario[id]|json}} -->
+                <div class="col-3 h-100">
+                    <app-usuario-avatar></app-usuario-avatar>
+
+                </div>
+                <div class="col-9 h-100">
+                    <router-outlet></router-outlet>
+                </div>
+
+                <!-- 👆 Contenido frid --  FIN ------------------------------ -->
+                <!-- ==================================================== -->
+
+            </div>
+            <!-- 👆 Perfil usuario --  FIN ------------------------------ -->
+        </section>
+    </div>
+</div>

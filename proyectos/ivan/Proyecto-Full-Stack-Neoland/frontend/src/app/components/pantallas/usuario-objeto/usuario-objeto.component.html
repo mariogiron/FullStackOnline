@@ -1,0 +1,195 @@
+<!-- 👇 Objetos perdidos usuario --  INICIO ------------------------------ -->
+
+<div class="col-12">
+    <div class="usuario-objeto">
+        <h1>Objetos perdidos por "usuario[id].nombre"</h1>
+
+        <div class="card-columns">
+
+            <div class="card text-center" *ngFor="let objeto of objeto">
+                <img src="{{objeto.foto | urlimg}}" class="card-img-top" alt="{{objeto.nombre}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{objeto.nombre}}</h5>
+                    <p class="card-text">"{{objeto.descripcion}}"</p>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><span>Perdido</span> | <span>Encontrado</span></li>
+                    <li class="list-group-item">Dapibus ac facilisis in</li>
+                    <li class="list-group-item">Vestibulum at eros</li>
+                </ul>
+                <div class="card-body">
+
+                    <a href="#" class="card-link" alt="Ver conversaciones relacionadas"
+                        title="Ver conversaciones relacionadas"><span class="material-icons">
+                            mail
+                        </span></a>
+                    <a href="#" class="card-link" alt="Ver objeto en el mapa" title="Ver objeto en el mapa"><span
+                            class="material-icons">
+                            place
+                        </span></a>
+                    <a href="#" class="card-link" alt="editar objeto" title="editar objeto"><span
+                            class="material-icons">
+                            edit
+                        </span></a>
+                    <a href="#" class="card-link" alt="borrar objeto" title="borrar objeto"><span
+                            class="material-icons">
+                            delete_forever
+                        </span></a>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+        <!-- <div class="card col-12" *ngFor="let objeto of objeto">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    {{objeto.foto}}
+                    <img src="../../../../assets/img/objeto.png" class="card-img-top" alt="{{objeto.nombre}}">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">
+                            {{objeto.nombre}}
+                        </h5>
+                        <p class="card-text">{{objeto.nombre}}</p>
+                        <p class="card-text">Estado</p>
+                        <p class="card-text">Estado</p>
+                        <p class="card-text">{{objeto.descripcion}}</p>
+                        <p> X mensajes realcionados</p>
+                        <p>perdido en</p>
+                        <a href="#" class="btn btn-primary">Ver en el mapa</a>
+                        <a href="#" class="btn btn-primary">Editar</a>
+                        <a href="#" class="btn btn-primary">Borrar</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+    </div>
+</div>
+<!-- 👆 Objetos perdidos --  FIN ------------------------------ -->
+<!-- 👇 Objetos encontrados usuario --  INICIO ------------------------------ -->
+<!-- <div class="col-12">
+    <div class="usuario-objeto">
+        <h1>Objetos Encontrados por @{{ usuario.alias }}</h1>
+        <div class="card mb-6" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="{{ objeto.foto | urlimg}}" class="card-img-top" alt="objeto perdido">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre</h5>
+                        <p class="card-text">localizacion</p>
+                        <p class="card-text">Estado</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the
+                            card's
+                            content.</p>
+                        <p> X mensajes realcionados</p>
+                        <a href="#" class="btn btn-primary">Ver en el mapa</a>
+                        <a href="#" class="btn btn-primary">Editar</a>
+                        <a href="#" class="btn btn-primary">Borrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-6" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="../../../../assets/img/objeto.png" class="card-img-top" alt="objeto perdido">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre</h5>
+                        <p class="card-text">localizacion</p>
+                        <p class="card-text">Estado</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the
+                            card's
+                            content.</p>
+                        <p> X mensajes realcionados</p>
+                        <a href="#" class="btn btn-primary">Ver en el mapa</a>
+                        <a href="#" class="btn btn-primary">Editar</a>
+                        <a href="#" class="btn btn-primary">Borrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-6" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="../../../../assets/img/objeto.png" class="card-img-top" alt="objeto perdido">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre</h5>
+                        <p class="card-text">localizacion</p>
+                        <p class="card-text">Estado</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the
+                            card's
+                            content.</p>
+                        <p> X mensajes realcionados</p>
+                        <a href="#" class="btn btn-primary">Ver en el mapa</a>
+                        <a href="#" class="btn btn-primary">Editar</a>
+                        <a href="#" class="btn btn-primary">Borrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-6" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="../../../../assets/img/objeto.png" class="card-img-top" alt="objeto perdido">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre</h5>
+                        <p class="card-text">localizacion</p>
+                        <p class="card-text">Estado</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the
+                            card's
+                            content.</p>
+                        <p> X mensajes realcionados</p>
+                        <a href="#" class="btn btn-primary">Ver en el mapa</a>
+                        <a href="#" class="btn btn-primary">Editar</a>
+                        <a href="#" class="btn btn-primary">Borrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="card mb-6" style="max-width: 540px;">
+            <div class="row no-gutters">
+                <div class="col-md-4">
+                    <img src="../../../../assets/img/objeto.png" class="card-img-top" alt="objeto perdido">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Nombre</h5>
+                        <p class="card-text">localizacion</p>
+                        <p class="card-text">Estado</p>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                            of
+                            the
+                            card's
+                            content.</p>
+                        <p> X mensajes realcionados</p>
+                        <a href="#" class="btn btn-primary">Ver en el mapa</a>
+                        <a href="#" class="btn btn-primary">Editar</a>
+                        <a href="#" class="btn btn-primary">Borrar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+<!-- 👆 Objetos encontrados --  FIN ------------------------------ -->

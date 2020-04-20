@@ -1,0 +1,7 @@
+<p>Contador: {{usuariosService.getContador()}}</p>
+<p>Usuarios: {{usuariosService.getUsuarios().length}}</p>
+<p>{{ usuariosOb | async | json }}</p>
+<div *ngFor="let usuario of usuariosOb|async" style="border: 1px solid black;">
+    <p>{{usuario.nombre}}</p>
+    <p>{{usuario.apellidos}}</p>
+</div>

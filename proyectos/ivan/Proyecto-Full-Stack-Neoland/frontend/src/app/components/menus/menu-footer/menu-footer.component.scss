@@ -1,0 +1,14 @@
+@import "../../import.scss";
+
+.nav-footer {
+  /* z-index: 50; */
+  /* @include positionAbsolute(auto, 0); */
+  @include flexCenter(row, center, flex-end);
+  flex-direction: column;
+  @include marcosInternos($spaceSmall);
+  padding-right: $anchoMenu;
+  width: 100%;
+  height: $anchoMenu;
+  background-color: $colorBg;
+  font-size: $fontSmaller;
+}

@@ -1,0 +1,77 @@
+/*Espacios -------------------------------------  */
+$spaceSmall: 5px;
+$spaceMedium: 15px;
+$spaceBig: 30px;
+
+/*Interface ---*/
+$anchoMenu: 50px;
+
+/*tipografías --------------------------------------*/
+//font-family: 'Rubik', sans-serif;
+//font-family: 'Rubik Mono One', sans-serif;
+/* $fontFamilyBase: "Rubik", sans-serif;
+$fontFamilyMono: "Rubik Mono One", sans-serif; */
+//$fontFamilyTitulo: ...;
+//$fontFamilySubtitulo: ...;
+
+$fontSizeInicialAjuste: 10px;
+$fontSmaller: 0.8rem;
+$fontSmall: 0.9rem;
+$fontMedium: 1rem;
+/*Weight*/
+$fontBold: 700;
+$fontBolder: 900;
+/*Colores*/
+$colorFontBase: #333333;
+$colorFontTitulo: #0d0916;
+$colorFontBaseGris: #333;
+$colorFontTituloGris: #000;
+/* $colorFontSecundario: #...;
+$colorFontParrafo: $colorFontSecundario; */
+
+/*Colores --------------------------------------*/
+$colorPrincipal: #6847ad;
+$colorPrincipalClaro: #a27dd6;
+$colorPrincipalOscuro: #a27dd6;
+
+$colorLlamada: #dc143c;
+
+$colorPrincipalHover: #45144b;
+
+$colorBg: #fff;
+$colorBgGrisClaro: #f4f4f4;
+/*
+
+$colorSecundario: #...;
+$colorSecundarioClaro: #...;
+$colorSecundarioHover: #...;
+$colorTerciario: #...;
+$colorTerciarioClaro: #...;
+$colorTerciarioHover: #...;
+
+$colorBlanco: #...;
+$colorBlancoMedio: #...;
+
+$colorGrisOscuro: #...;
+$colorGrisClaroAlto: #...;
+$colorGrisClaroBajo: #...;
+
+
+
+$colorBg: #...;
+$colorBgDestacado: #...;
+*/
+$colorGRadienteLineal: linear-gradient(269deg, $colorPrincipalClaro 0%, $colorPrincipal 100%);
+//@include colorGRadienteLineal
+
+/*
+$colorIcono: $colorPrincipal;
+*/ /*Enlaces --------------------------------------*/
+$colorLink: $colorPrincipal;
+/*$colorLinkHover: #...;
+
+$colorBoton: #...;
+$colorBotonHover: #...;
+...*/
+
+$EsquinaRedondeadaMedia: 10px;
