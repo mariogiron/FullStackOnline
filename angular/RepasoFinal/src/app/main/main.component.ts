@@ -8,9 +8,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  constructor(private usuariosService: UsuariosService) { }
+  usuarios: any[];
+  jugadoresSeleccionados: any[];
+
+  constructor(private usuariosService: UsuariosService) {
+    this.usuarios = [
+      { nombre: 'Mario', id: 1 },
+      { nombre: 'Federico', id: 2 },
+      { nombre: 'Rosa', id: 3 },
+      { nombre: 'Marcial', id: 4 },
+      { nombre: 'Mateo', id: 5 },
+    ]
+    this.jugadoresSeleccionados = [];
+  }
 
   ngOnInit(): void {
+  }
+
+  agregarJugador() {
+    let jugSelect = document.getElementById('jugadores');
+    console.log(jugSelect['value']);
+    this.jugadoresSeleccionados.push(jugSelect['value']);
+    console.log(this.jugadoresSeleccionados);
   }
 
   pulsarBoton() {
@@ -19,6 +38,11 @@ export class MainComponent implements OnInit {
 
   agregarUsuario() {
     this.usuariosService.agregarUsuario({ nombre: 'Mario', apellidos: 'Girón' });
+  }
+
+  // Método Submit del formulario
+  onSubmit() {
+    //formValues.jugadoresSeleccionados = this.jugadoresSeleccionados;
   }
 
 }

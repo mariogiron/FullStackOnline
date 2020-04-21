@@ -48,3 +48,4 @@ console.log(adul.hablar());
 
 let n = new Nino('Hugo', 'Martín', 'Colegio Guay');
 console.log(n);
+

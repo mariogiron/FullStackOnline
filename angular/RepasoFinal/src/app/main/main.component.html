@@ -1,2 +1,7 @@
 <button (click)="pulsarBoton()">INCREMENTA!</button>
 <button (click)="agregarUsuario()">Agrega Usuario</button>
+
+<select id="jugadores">
+    <option *ngFor="let usuario of usuarios" [value]="usuario.id">{{ usuario.nombre }}</option>
+</select>
+<button (click)="agregarJugador()">Agrega Jugador</button>
